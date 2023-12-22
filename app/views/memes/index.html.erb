@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Memes</h1>
+
+<div id="memes">
+  <% @memes.each do |meme| %>
+    <%= render meme %>
+    <p>
+      <%= link_to "Show this meme", meme %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New meme", new_meme_path %>
