@@ -1,25 +1,20 @@
 class MemesController < ApplicationController
   before_action :set_meme, only: %i[ show edit update destroy ]
 
-  # GET /memes or /memes.json
   def index
     @memes = Meme.all
   end
 
-  # GET /memes/1 or /memes/1.json
   def show
   end
 
-  # GET /memes/new
   def new
     @meme = Meme.new
   end
 
-  # GET /memes/1/edit
   def edit
   end
 
-  # POST /memes or /memes.json
   def create
     @meme = Meme.new(meme_params)
 
@@ -34,7 +29,6 @@ class MemesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /memes/1 or /memes/1.json
   def update
     respond_to do |format|
       if @meme.update(meme_params)
@@ -47,7 +41,6 @@ class MemesController < ApplicationController
     end
   end
 
-  # DELETE /memes/1 or /memes/1.json
   def destroy
     @meme.destroy
 
@@ -58,12 +51,10 @@ class MemesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_meme
       @meme = Meme.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def meme_params
       params.require(:meme).permit(:title, :image_url)
     end
