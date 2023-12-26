@@ -16,7 +16,7 @@ gem "bootsnap", require: false
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'sassc-rails'
-gem 'bootstrap-icons'
+gem 'bootstrap_icons_rails', '~> 1.91', '>= 1.91.01'
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]

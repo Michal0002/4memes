@@ -12,14 +12,13 @@
 
   <div>
     <%= form.label :image_url, style: "display: block" %>
-    <%= form.file_field :image_url%>
+    <%= form.file_field :image_url %>
     <% if meme.errors.has_key?(:image_url) %>
       <div class = "danger">
         <%= meme.errors.full_messages_for(:image_url).join(", ") %>
       </div>
     <% end %>
   </div>
-w
   <div>
     <%= form.submit %>
   </div>
