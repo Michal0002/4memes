@@ -1,11 +1,27 @@
-<div id="<%= dom_id meme %>">
-  <p>
-  <p>
-    <%= link_to meme.title, meme_path(meme) %>
-  </p>
-  </p>
+<div id="<%= dom_id(meme) %>" class="card text-center mb-4" style="background-color: #e6f7ff; border: 1px solid #b3d9ff;">
+  <%= link_to meme_path(meme), class: "card-header text-decoration-none" do %>
+    <h5 class="font-weight-bold m-0 text-dark">
+      <%= meme.title %>
+    </h5>
+  <% end %>
 
-  <p>
-       <%= image_tag(rails_blob_url(meme.image_url),size:400 ) %>
-  </p>
+  <div class="card-body d-flex justify-content-center align-items-center">
+    <%= image_tag(rails_blob_url(meme.image_url), size: 400, class: "img-fluid") %>
+  </div>
+
+  <div class="card-footer text-left">
+    <div class="d-flex align-items-center mb-2">
+      <%= image_tag(current_user.avatar, class: "rounded-circle mr-2", width: "32", height: "32") %>
+      <span><%= current_user.username %></span>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <!-- Pole na lajki -->
+        <button type="button" class="btn btn-primary btn-sm mb-2">
+          4like it!
+        </button>
+      </div>
+    </div>
+  </div>
 </div>

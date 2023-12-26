@@ -1,0 +1,6 @@
+<% if current_user %>
+<h1><%= current_user.username %>! </h1>
+<%= image_tag(current_user.avatar, size: '200x200', class:"rounded-circle bg-info p-1 d-inline-block ", alt:"user_profile_picture") if current_user.avatar.attached? %>
+<p> Memes uploaded: </p>
+<p> Meme coins: </p>
+<% end %>
