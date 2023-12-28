@@ -1,1 +1,35 @@
 @import "bootstrap";
+
+body {
+    background-color: #212529;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white
+}
+.avatar-pp1{
+    background-color:  rgb(252, 248, 40);
+}
+.avatar-pp1 img :hover{
+    background-color:  rgb(112, 112, 83); 
+    filter: blur(5px);
+    
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+button {
+    border-radius: 25px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+button:hover {
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}

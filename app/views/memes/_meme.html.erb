@@ -9,18 +9,18 @@
     <%= image_tag(rails_blob_url(meme.image_url), size: 400, class: "img-fluid") %>
   </div>
 
-  <div class="card-footer text-left">
+  <div class="card-footer text-left mt-auto">
     <div class="d-flex align-items-center mb-2">
-      <%= image_tag(current_user.avatar, class: "rounded-circle mr-2", width: "32", height: "32") %>
-      <span><%= current_user.username %></span>
+      <%= image_tag(current_user.avatar, class: "rounded-circle mr-2", width: "64", height: "64", alt: "author_profile_avatar") %>
+      <span class="h5"> <%= current_user.username %></span>
+      <%# <button type="button" class="btn btn-primary btn-sm ml-auto h5">
+        4like it!
+      </button> %>
     </div>
 
     <div class="row">
-      <div class="col-md-4">
-        <!-- Pole na lajki -->
-        <button type="button" class="btn btn-primary btn-sm mb-2">
-          4like it!
-        </button>
+      <div class="col-md-12 text-muted">
+        <%= time_ago_in_words(meme.created_at) %> ago
       </div>
     </div>
   </div>
