@@ -18,14 +18,14 @@
     <%= render 'navigation/navbar' %>
     <div class="container mt-3">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3 left-sidebar">
           <%= render 'navigation/sidebar' %>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 center-column">
           <%= render 'shared/alerts' %>
           <%= yield %>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 right-column">
           <%= yield :right_column %>
                     <%= render 'navigation/right_column' %>
         </div>

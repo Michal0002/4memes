@@ -1,13 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var toggleButton = document.getElementById("toggleButton");
-    var colMd3Div = document.querySelector(".col-md-3");
-  
-    toggleButton.addEventListener("click", function() {
-      if (colMd3Div.style.display === "none") {
-        colMd3Div.style.display = "block";
-      } else {
-        colMd3Div.style.display = "none";
-      }
-    });
+  var toggleButton = document.getElementById("toggleButton");
+  var leftSidebar = document.querySelector('.col-md-3.left-sidebar');
+  var rightColumn = document.querySelector('.col-md-3.right-column');
+  var centerColumn = document.querySelector('.col-md-6.center-column');
+
+  toggleButton.addEventListener("click", function() {
+    if (leftSidebar.style.display === "none") {
+      leftSidebar.style.display = "";
+      rightColumn.style.display = "";
+    } else {
+      leftSidebar.style.display = "none";
+      rightColumn.style.display = "none";
+    }
   });
-  
+});
