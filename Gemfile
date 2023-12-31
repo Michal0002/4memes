@@ -17,6 +17,8 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'sassc-rails'
 gem 'devise'
+gem 'annotate'
+
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end

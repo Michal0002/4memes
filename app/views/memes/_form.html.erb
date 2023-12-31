@@ -1,8 +1,11 @@
-<%= form_with(model: meme) do |form| %>
+<%= form_with(model: meme, multipart: true) do |form| %>
 
   <div>
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>
+    
+    <%= form.hidden_field  :author_id, value: current_user.id %>
+    <%= form.hidden_field :added_by, value: current_user.username %>
     <% if meme.errors.has_key?(:title) %>
       <div style="color: red">
         <%= meme.errors.full_messages_for(:title).join(", ") %>
@@ -14,7 +17,7 @@
     <%= form.label :image_url, style: "display: block" %>
     <%= form.file_field :image_url %>
     <% if meme.errors.has_key?(:image_url) %>
-      <div class = "danger">
+      <div style="color: red">
         <%= meme.errors.full_messages_for(:image_url).join(", ") %>
       </div>
     <% end %>
