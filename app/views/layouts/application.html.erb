@@ -11,6 +11,8 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag 'switch' %>
+    <%= javascript_include_tag 'alerts' %>
+
 
   </head>
 
@@ -27,7 +29,7 @@
         </div>
         <div class="col-md-3 right-column">
           <%= yield :right_column %>
-                    <%= render 'navigation/right_column' %>
+            <%= render 'navigation/right_column' %>
         </div>
       </div>
     </div>

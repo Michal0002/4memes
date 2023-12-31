@@ -7,29 +7,13 @@ body {
 }
 .avatar-pp1{
     background-color:  rgb(252, 248, 40);
+    border: 1px solid yellow;
+    overflow: hidden;
 }
-.avatar-pp1 img :hover{
-    background-color:  rgb(112, 112, 83); 
-    filter: blur(5px);
-    
+.avatar-pp1 {
+    transition: background-color 0.3s ease, filter 0.3s ease;
+    background-color: rgb(252, 248, 40);
+
 }
 
-@keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-button {
-    border-radius: 25px;
-    background-color: rgb(0, 0, 0);
-    color: white;
-}
 
-button:hover {
-    border-radius: 5px;
-    background-color: rgb(0, 0, 0);
-    color: white;
-}
